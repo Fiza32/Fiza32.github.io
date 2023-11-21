@@ -565,6 +565,8 @@ svg {
   align-items: center;
   column-gap: .5rem;
   font-weight: var(--font-medium);
+  text-decoration: none;
+  justify-content: center;
 }
 
 .projects__button i{
