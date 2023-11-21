@@ -406,8 +406,23 @@ svg {
 }
 
 .skills__group{
-  row-gap: 1rem;
-  list-style: decimal-leading-zero;
+  list-style: none;
+  padding: 0;
+  /* row-gap: 1rem;
+  list-style: decimal-leading-zero; */
+}
+
+.skills__group li{
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  color: var(--title-color);
+}
+
+.skills__group li img{
+  width: 70px;
+  height:70px;
+  margin-right: 10px;
 }
 
 .skills__item{
@@ -435,12 +450,33 @@ svg {
 }
 
 .services__description{
-  text-align: justify;
-  font-size: var(--small-font-size);
+  text-align: start;
+  background-color: var(--body-color);
+  font-size: var(--normal-font-size);
+  color: var(--title-color);
+  padding: 1rem 1.2rem;
+  border-radius: 1rem;
+  border: 2px solid var(--container-color);
+  transition: border .4s;
+}
+
+.services__description__icon{
+  display: flex;
+  justify-content: space-between;
+}
+
+.services__description__icon img{
+  flex: 1;
+  width: 50px;
+  height: 50px;
 }
 
 .services__description span{
   color: var(--first-color);
+}
+
+.services__description:hover{
+  border: 2px solid var(--first-color);
 }
 
 .services__icon{
@@ -467,7 +503,7 @@ svg {
 .projects__container{
   row-gap: 2rem;
   justify-content: center;
-  padding-block: 1rem;
+  padding-block: 2rem;
 }
 
 .projects__card{
@@ -518,8 +554,10 @@ svg {
 
 .projects_hover_text{
   /* color: var(--container-color); */
-  color: black;
+  color: var(--title-color);
   font-weight: 700;
+  font-size: var(--bigger-font-size);
+  text-decoration: underline;
 }
 
 .projects__button{
@@ -535,6 +573,40 @@ svg {
 
 .projects__card:hover .projects__modal{
   bottom: 0;
+}
+
+/*=============== GitHub ===============*/
+
+#github{
+  background: var(--color-white);
+}
+.github-container{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.github-activity-calendar{
+  box-shadow: 0px 3px 12px 0px #ccc;
+  border: 1px solid transparent;
+  border-radius: var(--border-radious3);
+}
+.github-activity-calendar:hover{
+  box-shadow: none;
+  box-shadow: 0px 3px 12px 0px var(--color-light);
+  border: 1px solid var(--color-light);
+}
+#github-stats-card img{
+  margin-bottom: .7rem;
+  gap: 1.4rem;
+}
+#github-stats-card img:hover{
+  overflow: hidden;
+  transition: var(--transition);
+  box-shadow: 0px 3px 12px 0px #ccc;
+  border-radius: var(--border-radious3);
 }
 
 
@@ -705,7 +777,7 @@ svg {
   }
 }
 
-/* For medium devices */
+/* =================  For medium devices ======================= */
 @media screen and (min-width: 576px){
   .home__container, 
   .about__container,
@@ -854,7 +926,7 @@ svg {
   }
 
   .services__container{
-    grid-template-columns: repeat(3, 352px);
+    grid-template-columns: repeat(2, 352px);
     padding-block: 2.5rem 4rem;
   }
 
@@ -863,8 +935,8 @@ svg {
   }
 
   .projects__container{
-    grid-template-columns: repeat(3, 350px);
-    row-gap: 3rem;
+    grid-template-columns: repeat(2, 350px);
+    row-gap: 5rem;
     padding: 2.5rem 4rem;
   }
 
