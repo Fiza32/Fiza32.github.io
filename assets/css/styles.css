@@ -145,9 +145,6 @@ svg {
   margin-bottom: .25rem;
 }
 
-/* .section__subtitle span {
-  color: var(--first-color);
-} */
 
 .section__title span{
   color: var(--first-color);
@@ -278,12 +275,17 @@ svg {
   text-align: center;
 }
 
+.home__data a{
+  margin-right: 2rem;
+}
+
 .home__subtitle,
 .home__education{
   font-size: var(--bigger-font-size);
 }
 
 .home__subtitle span,
+.home__education span,
 .home__title{
   color: var(--first-color);
 }
@@ -294,7 +296,7 @@ svg {
 }
 
 .home__description{
-  margin-block: 1rem 1.5rem;
+  margin-block: 1rem;
 }
 
 .home__social{
@@ -323,17 +325,8 @@ svg {
 
 .home__blob{
   width: 320px;
-  /* fill: var(--first-color); */
   filter: drop-shadow(0 12px 12px hsla(var(--hue), 100%, 40%, .2));
 }
-
-/* Fix this size according to the Image size */
-/*
-.home_img{
-  width: 900px;
-  transform: translateX(-120px);
-}
-*/
 
 /*=============== BUTTON ===============*/
 .button{
@@ -377,7 +370,29 @@ svg {
 
 /*=============== SKILLS ===============*/
 .skills{
+  background-color: var(--body-color);
+}
+
+.skills__card{
   background-color: var(--container-color);
+  padding: 1rem 1.2rem;
+  border-radius: 1rem;
+  border: 2px solid var(--body-color);
+  transition: border .4s;
+}
+
+.skills__card__main{
+  background-color: var(--first-color);
+  padding: 1rem 1.3rem;
+  border-radius: 1rem;
+  border: 2px solid var(--container-color);
+  justify-content: center;
+  font-size: larger;
+  font-weight: 700;
+}
+
+.skills__card:hover{
+  border: 2px solid var(--first-color);
 }
 
 .skills__container{
@@ -393,13 +408,12 @@ svg {
   margin-bottom: 2rem;
 }
 
-.skills__content,
-.skills__group{
+.skills__content{
   display: grid;
 }
 
 .skills__content{
-  grid-template-columns: repeat(2, max-content);
+  grid-template-columns: repeat(1, max-content);
   column-gap: 4rem;
   justify-content: center;
   align-items: baseline;
@@ -408,21 +422,19 @@ svg {
 .skills__group{
   list-style: none;
   padding: 0;
-  /* row-gap: 1rem;
-  list-style: decimal-leading-zero; */
 }
 
 .skills__group li{
   display: flex;
   align-items: center;
-  margin-bottom: 10px;
   color: var(--title-color);
+  margin-top: 1rem;
 }
 
 .skills__group li img{
   width: 70px;
   height:70px;
-  margin-right: 10px;
+  margin-right: 1rem;
 }
 
 .skills__item{
@@ -434,7 +446,17 @@ svg {
   color: var(--first-color);
 }
 
+.skills__button,
+.tools__button{
+  justify-self: center;
+  cursor: pointer;
+}
+
 /*=============== SERVICES ===============*/
+.services{
+  background-color: var(--container-color);
+}
+
 .servies__container{
   row-gap: 2rem;
   padding-block: 1rem;
@@ -442,7 +464,7 @@ svg {
 
 .services__card{
   text-align: start;
-  background-color: var(--container-color);
+  background-color: var(--body-color);
   padding: 1rem 1.2rem;
   border-radius: 1rem;
   border: 2px solid var(--container-color);
@@ -451,7 +473,7 @@ svg {
 
 .services__description{
   text-align: start;
-  background-color: var(--body-color);
+  background-color: var(--container-color);
   font-size: var(--normal-font-size);
   color: var(--title-color);
   padding: 1rem 1.2rem;
@@ -497,7 +519,7 @@ svg {
 
 /*=============== PROJECTS ===============*/
 .projects{
-  background-color: var(--container-color);
+  background-color: var(--body-color);
 }
 
 .projects__container{
@@ -553,7 +575,6 @@ svg {
 }
 
 .projects_hover_text{
-  /* color: var(--container-color); */
   color: var(--title-color);
   font-weight: 700;
   font-size: var(--bigger-font-size);
@@ -579,40 +600,31 @@ svg {
 
 /*=============== GitHub ===============*/
 
-#github{
-  background: var(--color-white);
+.github{
+  background: var(--container-color);
 }
 .github-container{
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  align-items: center;
-  justify-content: center;
+  display: grid;
   text-align: center;
+  padding: 1rem;
 }
-.github-activity-calendar{
-  box-shadow: 0px 3px 12px 0px #ccc;
-  border: 1px solid transparent;
-  border-radius: var(--border-radious3);
-}
-.github-activity-calendar:hover{
-  box-shadow: none;
-  box-shadow: 0px 3px 12px 0px var(--color-light);
-  border: 1px solid var(--color-light);
-}
+
 #github-stats-card img{
-  margin-bottom: .7rem;
-  gap: 1.4rem;
+  margin: 1.5rem 0;
+  border-radius: 2rem;
+  border: 4px solid var(--container-color);
 }
+
 #github-stats-card img:hover{
-  overflow: hidden;
-  transition: var(--transition);
-  box-shadow: 0px 3px 12px 0px #ccc;
-  border-radius: var(--border-radious3);
+  border: 4px solid var(--first-color);
 }
 
 
 /*=============== CONTACT ===============*/
+.contact{
+  background-color: var(--body-color);
+}
+
 .contact__container{
   padding-top: 1rem;
 }
@@ -790,6 +802,15 @@ svg {
     grid-template-columns: 360px;
     justify-content: center;
   }
+
+  .skills__content{
+    grid-template-columns: repeat(1, max-content);
+  }
+
+  .github-container{
+    grid-template-columns: repeat(1, 452px);
+    justify-content: center;
+  }
 }
 
 @media screen and (min-width: 768px){
@@ -828,6 +849,15 @@ svg {
   .projectsc{
     grid-template-columns: repeat(2, 352px);
   }
+
+  .skills__content{
+    grid-template-columns: repeat(2, max-content);
+  }
+
+  .github-container{
+    grid-template-columns: repeat(1, 492px);
+    justify-content: center;
+  }
 }
 
 /* For large devices */
@@ -835,10 +865,6 @@ svg {
   .section{
     padding-block: 7rem, 2rem;
   }
-
-  /* .section__subtitle{
-    font-size: var(--normal-font-size);
-  } */
 
   .nav{
     height: calc(var(--header-height) + 1.5rem);
@@ -862,6 +888,11 @@ svg {
     backdrop-filter: blur(25px);
     -webkit-backdrop-filter: blur(25px); /* For Safari */
    }
+
+   .github-container{
+    grid-template-columns: repeat(1, 452px);
+    justify-content: center;
+  }
 }
 
 @media screen and (min-width: 1152px){
@@ -880,7 +911,7 @@ svg {
   }
 
   .home__content{
-    row-gap: 4.5rem;
+    row-gap: 2.5rem;
   }
 
   .home__description{
@@ -934,6 +965,14 @@ svg {
 
   .services__card{
     padding: 3.5rem 2rem;
+  }
+
+  .skills__card{
+    padding: 1rem;
+  }
+
+  .skills__card__main{
+    padding: 1.3rem;
   }
 
   .projects__container{
@@ -993,6 +1032,11 @@ svg {
 
   .scrollup{
     right: 3rem;
+  }
+
+  .github-container{
+    grid-template-columns: repeat(1, 552px);
+    justify-content: center;
   }
 }
 
