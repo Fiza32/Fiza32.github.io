@@ -26,13 +26,5 @@ The website is deployed and can be accessed at (https://fiza32.github.io/).
 
 ## Usage
 
-Feel free to explore my portfolio and get in touch if you have any inquiries or opportunities for collaboration.
-<!--
-## License
+Feel free to explore my portfolio and get in touch if you have any feedback or suggestions for Improvement.
 
-This project is open-source and available under the [License Name] license. See the [LICENSE](LICENSE) file for more details.
-
-## Acknowledgments
-
-- [List any acknowledgments or credits for resources or inspiration.]
--->
